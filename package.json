@@ -7,5 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joram Clervius",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "composable-middleware": "^0.3.0",
+    "cookie-parser": "^1.4.3",
+    "errorhandler": "^1.4.3",
+    "express": "^4.14.0",
+    "express-jwt": "^3.4.0",
+    "jade": "^1.11.0",
+    "lodash": "^4.13.1",
+    "mongoose": "^4.5.4",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.2",
+    "path": "^0.12.7",
+    "stylus": "^0.54.5"
+  }
 }
