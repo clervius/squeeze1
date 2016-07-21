@@ -1,0 +1,552 @@
+form(id="taxpayerCreate", action="/create/taxpayer/", method="post")
+	h3 About You
+	fieldset 
+		legend Your information		
+		.row
+			.col-md-12
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-lock
+							|&nbsp;Private Information
+						p.card-description Information here will not be visible to professionals until you accept. - &nbsp;
+							small
+								i.fa.fa-asterisk
+								&nbsp; Denotes mandatory field
+						.row
+							.col-sm-3
+								.form-group.label-floating.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;First Name *
+									input.form-control(value="John", name="")
+									span.material-input
+							.col-sm-3
+								.form-group.label-floating.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Last Name *
+									input.form-control(value="Peit Dos", name="")
+									span.material-input
+							.col-sm-3
+								.form-group.label-floating.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Email Address *
+									input.form-control(value="advent.john@hotmail.com", name="")
+									span.material-input
+							.col-sm-3
+								.form-group.label-floating.is-empty.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Phone Number *
+									input.form-control(name="")
+									span.material-input
+						.row
+							.col-sm-4
+								.form-group.label-floating.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;City *
+									input.form-control(name="")
+									span.material-input
+							.col-sm-2
+								.form-group.has-info						
+									select.select.form-control(name="", placeholder="State")
+										option.disabled(disabled="disabled", selected="selected") State
+										option(value="") AL
+										option(value="") AK
+										option(value="") AS
+										option(value="") AZ
+										option(value="") AR
+										option(value="") CA
+										option(value="") CO
+										option(value="") CT
+										option(value="") DE
+										option(value="")	DC
+										option(value="")	FL
+										option(value="")	GA
+										option(value="")	GU
+										option(value="")	HI
+										option(value="")	ID
+										option(value="")	IL
+										option(value="")	IN
+										option(value="")	IA
+										option(value="")	KS
+										option(value="")	KY
+										option(value="")	LA
+										option(value="")	ME
+										option(value="")	MD
+										option(value="")	MH
+										option(value="")	MA
+										option(value="")	MI
+										option(value="")	FM
+										option(value="")	MN
+										option(value="")	MS
+										option(value="")	MO
+										option(value="")	MT
+										option(value="")	NE
+										option(value="")	NV
+										option(value="")	NH
+										option(value="")	NJ
+										option(value="")	NM
+										option(value="")	NY
+										option(value="")	NC
+										option(value="")	ND
+										option(value="")	MP
+										option(value="")	OH
+										option(value="")	OK
+										option(value="")	OR
+										option(value="")	PW
+										option(value="")	PA
+										option(value="")	PR
+										option(value="")	RI
+										option(value="")	SC
+										option(value="")	SD
+										option(value="")	TN
+										option(value="")	TX
+										option(value="")	UT
+										option(value="")	VT
+										option(value="")	VA
+										option(value="")	VI
+										option(value="")	WA
+										option(value="")	WV
+										option(value="")	WI
+										option(value="")	WY
+
+									span.material-input
+							.col-sm-3
+								.form-group.label-floating.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Zip *
+									input.form-control(name="")
+									span.material-input
+							.col-sm-3
+								.form-group.label-static.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Date of Birth *
+									input.form-control.datepicker(name="", placeholder="Select Date")
+									span.material-input
+
+		.row
+			.col-sm-6
+				.card
+					.content
+						h4.card-title Filing Status
+							small(style="display:block") Please select your&nbsp;
+								strong filing status
+								| &nbsp;for 2016
+						hr
+						.radio
+							label
+								input(type="radio", name="filingStatus", value="")
+								span.circle
+								| &nbsp;Single
+						.radio
+							label
+								input(type="radio", name="filingStatus", value="")
+								span.circle
+								| &nbsp;Maried Filing Jointly
+						.radio
+							label
+								input(type="radio", name="filingStatus", value="")
+								span.circle
+								| &nbsp;Married Filing Separately
+						.radio
+							label
+								input(type="radio", name="filingStatus", value="")
+								span.circle
+								| &nbsp;head of Household
+						.radio
+							label
+								input(type="radio", name="filingStatus", value="")
+								span.circle
+								| &nbsp;Qualifying Widow
+						.footer
+							.stats
+								i.fa.fa-exclamation-circle
+								|&nbsp;More information
+			.col-sm-6
+				.card
+					.content						
+						h4.card-title Number of Dependents
+							small(style="display:block") How many&nbsp;
+								strong people
+								| &nbsp;do you support?
+						hr 
+						.row
+							.col-sm-2
+								.radio
+									label
+										input(type="radio", name="numdDep", value="")
+										span.circle
+										| &nbsp;1
+							.col-sm-2
+								.radio
+									label
+										input(type="radio", name="numdDep", value="")
+										span.circle
+										| &nbsp;2
+							.col-sm-2
+								.radio
+									label
+										input(type="radio", name="numdDep", value="")
+										span.circle
+										| &nbsp;3
+							.col-sm-2
+								.radio
+									label
+										input(type="radio", name="numdDep", value="")
+										span.circle
+										| &nbsp;4
+							.col-sm-2
+								.radio
+									label
+										input(type="radio", name="numdDep", value="")
+										span.circle
+										| &nbsp;5+
+				.clearfix
+				h4.title School Status
+					small(style="display:block") Were you in school in 2016?
+				.row
+					.col-sm-5
+						select.select.btn.btn-raised.btn-primary.btn-round
+							option(disabled, selected) Selected Status
+							option(value="") Yes
+							option(value="") No
+		hr
+		.row.dpWrap
+			.col-md-3.dep1.col-sm-4
+				.card
+					.content
+						h4.card-title Dependent 1
+						.row
+							.col-sm-12
+								.form-group.label-static.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Date of Birth *
+									input.form-control.datepicker(name="", placeholder="Date of Birth")
+									span.material-input
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Student?
+									option(value="") Yes
+									option(value="") No
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Disabled?
+									option(value="") Yes
+									option(value="") No
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Live with you?
+									option(value="") Yes
+									option(value="") No
+			.col-md-3.dep2.col-sm-4
+				.card
+					.content
+						h4.card-title Dependent 2
+						.row
+							.col-sm-12
+								.form-group.label-static.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Date of Birth *
+									input.form-control.datepicker(name="", placeholder="Date of Birth")
+									span.material-input
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Student?
+									option(value="") Yes
+									option(value="") No
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Disabled?
+									option(value="") Yes
+									option(value="") No
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Live with you?
+									option(value="") Yes
+									option(value="") No
+			.col-md-3.dep3.col-sm-4
+				.card
+					.content
+						h4.card-title Dependent 3
+						.row
+							.col-sm-12
+								.form-group.label-static.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Date of Birth *
+									input.form-control.datepicker(name="", placeholder="Date of Birth")
+									span.material-input
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Student?
+									option(value="") Yes
+									option(value="") No
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Disabled?
+									option(value="") Yes
+									option(value="") No
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Live with you?
+									option(value="") Yes
+									option(value="") No
+			.col-md-3.dep4.col-sm-4
+				.card
+					.content
+						h4.card-title Dependent 4
+						.row
+							.col-sm-12
+								.form-group.label-static.has-info
+									label.control-label 
+										i.fa.fa-lock
+										|&nbsp;&nbsp;Date of Birth *
+									input.form-control.datepicker(name="", placeholder="Date of Birth")
+									span.material-input
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Student?
+									option(value="") Yes
+									option(value="") No
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Disabled?
+									option(value="") Yes
+									option(value="") No
+						.row
+							.col-md-12
+								select.select.btn.btn-raised.btn-primary.btn-round
+									option(disabled, selected) Live with you?
+									option(value="") Yes
+									option(value="") No
+	h3 Income
+	fieldset
+		legend Your Income						
+		.row
+			.col-md-12
+				.card
+					.content
+						h4.card-title Sources of Income
+						p Please select all
+							strong &nbsp; sources of income
+							|&nbsp; you had in 2016.
+						hr
+						.row
+							.col-md-3.col-sm-4
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-briefcase
+										|&nbsp;&nbsp;Employment (W-2)
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-file-text
+										|&nbsp;&nbsp;Unemployment
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-coffee
+										|&nbsp;&nbsp;Self Employment
+							.col-md-3.col-sm-4
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-university
+										|&nbsp;&nbsp;Social Security Benefits
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-flag
+										|&nbsp;&nbsp;Non-taxable Combat Pay
+							.col-md-3.col-sm-4
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-money
+										|&nbsp;&nbsp;Interest
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-home
+										|&nbsp;&nbsp;Rental, Royalty, &amp; Passive income
+							.col-md-3.col-sm-4
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-line-chart
+										|&nbsp;&nbsp;Investments or Dividends
+								.checkbox
+									label
+										input(type="checkbox")
+										span.checkbox-material
+										i.fa.fa-area-chart
+										|&nbsp;&nbsp;Capital Gain or Loss
+		hr
+		.row
+			.col-sm-3
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-briefcase
+							|&nbsp;&nbsp;Employment (W-2)
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Income
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Fed Taxes Paid
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label State Taxes Paid
+								input.form-control(name="")
+								span.material-input
+			.col-sm-3
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-file-text
+							|&nbsp;&nbsp;Unemployment
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Income
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Fed Taxes Paid
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label State Taxes Paid
+								input.form-control(name="")
+								span.material-input
+			.col-sm-3
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-coffee
+							|&nbsp;&nbsp;Self Employment
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Income
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Expenses
+								input.form-control(name="")
+								span.material-input
+			.col-sm-3
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-university
+							|&nbsp;&nbsp;Social Security
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Income
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Fed Taxes Paid
+								input.form-control(name="")
+								span.material-input
+		.row
+			.col-sm-3
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-flag
+							|&nbsp;&nbsp;Combat Pay
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Income
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Combat Pay
+								input.form-control(name="")
+								span.material-input
+			.col-sm-3
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-money
+							|&nbsp;&nbsp;Interest
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Income
+								input.form-control(name="")
+								span.material-input
+			.col-sm-3
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-line-chart
+							|&nbsp;&nbsp;Dividends
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Income
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Qualified Dividends
+								input.form-control(name="")
+								span.material-input
+			.col-sm-3
+				.card
+					.content.content-primary
+						h4.card-title 
+							i.fa.fa-area-chart
+							|&nbsp;&nbsp;Retirement
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Income
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Fed Taxes Paid
+								input.form-control(name="")
+								span.material-input
+						.clearfix
+							.form-group.label-floating.has-info
+								label.control-label Code
+								input.form-control(name="")
+								span.material-input

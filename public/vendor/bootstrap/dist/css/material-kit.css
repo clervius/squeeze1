@@ -4073,7 +4073,7 @@ select[data-dropdownjs][disabled] + .dropdownjs > input[readonly] {
 
 .dropdownjs::after {
   right: 10px;
-  top: 20px;
+  top: calc(50% - 10px);
   font-size: 25px;
   position: absolute;
   font-family: 'Material Icons';
