@@ -37,3 +37,9 @@ a:hover {
 .toplist li {
   display: inline-block;
 }
+.incomes,
+.income,
+.dependentsContainer,
+.dep {
+  display: none;
+}

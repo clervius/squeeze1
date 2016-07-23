@@ -1,0 +1,67 @@
+fieldset
+	legend Your Income						
+	.row
+		.col-md-12
+			.card
+				.content
+					h4.card-title Sources of Income
+					p Please select all
+						strong &nbsp; sources of income
+						|&nbsp; you had in 2016.
+					hr
+					.row
+						.col-md-3.col-sm-4
+							.checkbox
+								label
+									input.oneInc(type="checkbox", name="", id="", data-income="inc1")
+									span.checkbox-material
+									i.fa.fa-briefcase
+									|&nbsp;&nbsp;Employment (W-2)
+							.checkbox
+								label
+									input.oneInc(type="checkbox", name="", id="", data-income="inc2")
+									span.checkbox-material
+									i.fa.fa-file-text
+									|&nbsp;&nbsp;Unemployment
+							.checkbox
+								label
+									input.oneInc(type="checkbox", name="", id="", data-income="inc3")
+									span.checkbox-material
+									i.fa.fa-coffee
+									|&nbsp;&nbsp;Self Employment
+						.col-md-3.col-sm-4
+							.checkbox
+								label
+									input.oneInc(type="checkbox", name="", id="", data-income="inc4")
+									span.checkbox-material
+									i.fa.fa-university
+									|&nbsp;&nbsp;Social Security Benefits
+							.checkbox
+								label
+									input.oneInc(type="checkbox", name="", id="", data-income="inc5")
+									span.checkbox-material
+									i.fa.fa-flag
+									|&nbsp;&nbsp;Non-taxable Combat Pay
+						.col-md-3.col-sm-4
+							.checkbox
+								label
+									input.oneInc(type="checkbox", name="", id="", data-income="inc6")
+									span.checkbox-material
+									i.fa.fa-money
+									|&nbsp;&nbsp;Interest
+							.checkbox
+								label
+									input.oneInc(type="checkbox", name="", id="", data-income="inc7")
+									span.checkbox-material
+									i.fa.fa-line-chart
+									|&nbsp;&nbsp;Investments or Dividends
+						
+						.col-md-3.col-sm-4
+							
+							.checkbox
+								label
+									input.oneInc(type="checkbox", name="", id="", data-income="inc8")
+									span.checkbox-material
+									i.fa.fa-area-chart
+									|&nbsp;&nbsp;Retirement
+	include incomes

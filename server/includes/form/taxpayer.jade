@@ -1,0 +1,163 @@
+fieldset 
+	legend Your information		
+	.row
+		.col-md-12
+			.card
+				.content.content-primary
+					h4.card-title 
+						i.fa.fa-lock
+						|&nbsp;Private Information
+					p.card-description Information here will not be visible to professionals until you accept. - &nbsp;
+						small
+							i.fa.fa-asterisk
+							&nbsp; Denotes mandatory field
+					.row
+						.col-sm-3
+							.form-group.label-floating.has-info
+								label.control-label 
+									i.fa.fa-lock
+									|&nbsp;&nbsp;First Name *
+								input.form-control(value="John", name="firstname", id="")
+								span.material-input
+						.col-sm-3
+							.form-group.label-floating.has-info
+								label.control-label 
+									i.fa.fa-lock
+									|&nbsp;&nbsp;Last Name *
+								input.form-control(value="Peit Dos", name="lastname", id="")
+								span.material-input
+						.col-sm-3
+							.form-group.label-floating.has-info
+								label.control-label 
+									i.fa.fa-lock
+									|&nbsp;&nbsp;Email Address *
+								input.form-control(value="advent.john@hotmail.com", name="email", id="")
+								span.material-input
+						.col-sm-3
+							.form-group.label-floating.is-empty.has-info
+								label.control-label 
+									i.fa.fa-lock
+									|&nbsp;&nbsp;Phone Number *
+								input.form-control(name="pNumber", id="")
+								span.material-input
+					.row
+						.col-sm-4
+							.form-group.label-floating.has-info
+								label.control-label 
+									i.fa.fa-lock
+									|&nbsp;&nbsp;City *
+								input.form-control(name="city", id="")
+								span.material-input
+						.col-sm-2
+							.form-group.has-info						
+								select.select.form-control(name="state", placeholder="State", id="")
+									option.disabled(disabled="disabled", selected="selected") State
+									include states
+								span.material-input
+						.col-sm-3
+							.form-group.label-floating.has-info
+								label.control-label 
+									i.fa.fa-lock
+									|&nbsp;&nbsp;Zip *
+								input.form-control(name="zip", id="")
+								span.material-input
+						.col-sm-3
+							.form-group.label-static.has-info
+								label.control-label 
+									i.fa.fa-lock
+									|&nbsp;&nbsp;Date of Birth *
+								input.form-control.datepicker(name="tpDob", placeholder="Select Date", id="")
+								span.material-input
+	.row
+		.col-sm-6
+			.card
+				.content
+					h4.card-title Filing Status
+						small(style="display:block") Please select your&nbsp;
+							strong filing status
+							| &nbsp;for 2016
+					hr
+					.radio
+						label
+							input(type="radio", name="filingStatus", value="s", id="")
+							span.circle
+							| &nbsp;Single
+					.radio
+						label
+							input(type="radio", name="filingStatus", value="mfj", id="")
+							span.circle
+							| &nbsp;Married Filing Jointly
+					.radio
+						label
+							input(type="radio", name="filingStatus", value="mfs", id="")
+							span.circle
+							| &nbsp;Married Filing Separately
+					.radio
+						label
+							input(type="radio", name="filingStatus", value="hoh", id="")
+							span.circle
+							| &nbsp;Head of Household
+					.radio
+						label
+							input(type="radio", name="filingStatus", value="qw", id="")
+							span.circle
+							| &nbsp;Qualifying Widow
+					.footer
+						.stats
+							i.fa.fa-exclamation-circle
+							|&nbsp;More information
+		.col-sm-6
+			.card
+				.content						
+					h4.card-title Number of Dependents
+						small(style="display:block") How many&nbsp;
+							strong people
+							| &nbsp;do you support?
+					hr 
+					.row
+						.col-sm-2
+							.radio
+								label
+									input.depChange(type="radio", name="numdDep", value="0", id="")
+									span.circle
+									| &nbsp;0
+						.col-sm-2
+							.radio
+								label
+									input.depChange(type="radio", name="numdDep", value="1", id="")
+									span.circle
+									| &nbsp;1
+						.col-sm-2
+							.radio
+								label
+									input.depChange(type="radio", name="numdDep", value="2", id="")
+									span.circle
+									| &nbsp;2
+						.col-sm-2
+							.radio
+								label
+									input.depChange(type="radio", name="numdDep", value="3", id="")
+									span.circle
+									| &nbsp;3
+						.col-sm-2
+							.radio
+								label
+									input.depChange(type="radio", name="numdDep", value="4", id="")
+									span.circle
+									| &nbsp;4
+						.col-sm-2
+							.radio
+								label
+									input.depChange(type="radio", name="numdDep", value="5", id="")
+									span.circle
+									| &nbsp;5
+			.clearfix
+			h4.title School Status
+				small(style="display:block") Were you in school in 2016?
+			.row
+				.col-sm-5
+					select.select.btn.btn-raised.btn-primary.btn-round(name="student")
+						option(disabled, selected) Selected Status
+						option(value="") Yes
+						option(value="") No
+	include dependents

@@ -1,0 +1,20 @@
+doctype
+html
+	head
+		title Great Success
+		include ../includes/head
+	body.section-white.header-2
+		include ../includes/mainNav
+		.page-header.header-filter(style="background-image: url('img/city.jpg');background-size: cover; background-position: top center;")
+			.container
+				.row
+					.col-md-8.col-md-offset-2.text-center
+						h1.title Success!
+						h4 You have successfully submitted the form for #{ taxpayer.firtname } in #{ taxpayer.city}
+					.col-md-10.col-md-offset-1
+						.card.card-raised.card-form-horizontal
+							.content
+								h4.card-title Drink some Henny!
+				include ../includes/footer
+		include ../includes/scripts
+		
