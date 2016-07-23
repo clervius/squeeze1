@@ -155,7 +155,7 @@ exports.createTaxpayer = function(req, res){
 	var newTP = new taxpayer();
 
 	newTP.firstName = req.body.firstname;
-	newTP.lastname = req.body.lastname;
+	newTP.lastName = req.body.lastname;
 	newTP.email = req.body.email;
 	newTP.city = req.body.city;
 	newTP.state = req.body.state;
